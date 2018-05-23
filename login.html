@@ -27,14 +27,14 @@
                 <section class="flex-container ui-input">
                     
                     <div class="input-options">
-                        <a href="#" class=" active" id="login">Log in</a>
+                        <a href="#"  id="login">Log in</a>
                         <span> &nbsp; / &nbsp; </span>
-                        <a href="#" id="signup" class="">Sign up</a>
+                        <a href="#" class=" active" id="signup" class="">Sign up</a>
                     </div>
                     
                     <div class="input-login">
                         <!--login form-->
-                        <form action="" method="GET" id="login-form" class="form flex-container">
+                        <form action="" method="GET" id="login-form" class="form flex-container hidden">
                             <fieldset>
                                 <label>Email</label>
                                 <div class="input-field">
@@ -52,7 +52,7 @@
                         </form>
                         
                         <!--signup form-->
-                        <form action="" method="GET" id="signup-form" class="form flex-container hidden">
+                        <form action="" method="GET" id="signup-form" class="form flex-container">
                             <fieldset>
                                 <label>Email</label>
                                 <div class="input-field">
@@ -73,12 +73,14 @@
                             </fieldset>
                             <fieldset>
                                 <label class="checkbox">
-                                    <input type="checkbox" id="agreement" name="agreement" value="terms">
-                                    <span>I agree to the <a href="#">terms and conditions</a></span>
+                                    <input type="checkbox" id="agreement" name="agreement" value="terms" checked="checked">
+                                    <span></span>
+                                    I agree to the <a href="#"> &nbsp; terms and conditions</a>
                                 </label>
                                 <label  class="checkbox">
                                     <input type="checkbox" id="rememberPsd" name="remember" value="password">
-                                    <span>Remember my password</span>
+                                    <span></span>
+                                    Remember my password
                                 </label>
                             </fieldset>
                             <button type="submit" form="login-form" value="submit" class="btn signup-btn">Sign up</button>
