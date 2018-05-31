@@ -37,7 +37,7 @@ fieldset {
 
 label {
     margin: 0.6vh 0;
-    display: block;
+    display: inline-block;
     font-size: 15px;
     font-weight: normal;
     font-style: normal;
@@ -116,9 +116,14 @@ label {
     position: relative;
 }
 
+
 .input-login fieldset {
     margin-top: 15px;
     margin-bottom: 10px;
+}
+
+.input-field {
+    position: relative;
 }
 
 .input-field input {
@@ -128,6 +133,15 @@ label {
     box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
     border: solid 0.5px #c1c1c1;
     padding-left: 40px;
+    position: relative;
+}
+
+.pswd-tips {
+    position: absolute;
+    right: 0;
+    top: -18px;
+    font-size: 10px;
+    color: #414141;
 }
 
 input::placeholder {
@@ -140,15 +154,32 @@ input::placeholder {
     color: #b9b9b9;
 }
 
-.input-field #email {
+input[type=email] {
     background: white url(../images/glyphs/envelope.svg) 10px no-repeat;
     background-size: 20px;
 }
 
-.input-field #password {
+input[type=password] {
     background: white url(../images/glyphs/lock.svg) 12px no-repeat;
     background-size: 20px;
 }
+
+.input-valid::after {
+    content: "\2713";
+    font-weight: 900;
+    font-size: 20px;
+    color: #80ba06;
+    text-align: center;
+    display: block;
+    width: 20px;
+    height: 20px;
+    transform: translate(100%,-50%);
+    top: 40%;
+    right: -5px;
+    position: absolute;
+}
+
+
 
 .find-password {
     font-size: 15px;

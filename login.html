@@ -6,12 +6,9 @@
     <title>Login Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
-    
     <link rel="icon" href="./images/icon.png" type="image/gif" />
-
 </head>
 <body>
     <main class="flex-container">
@@ -21,7 +18,7 @@
             <div class="flex-container content">
                 
                 <section class="flex-container ui-logo">
-                    <img src="./images/logo.png" />
+                    <img src="./images/logo.png" alt="company logo"/>
                 </section>
 
                 <section class="flex-container ui-input">
@@ -29,7 +26,7 @@
                     <div class="input-options">
                         <a href="#"  id="login">Log in</a>
                         <span> &nbsp; / &nbsp; </span>
-                        <a href="#" class=" active" id="signup" class="">Sign up</a>
+                        <a href="#" class=" active" id="signup">Sign up</a>
                     </div>
                     
                     <div class="input-login">
@@ -37,14 +34,14 @@
                         <form action="" method="GET" id="login-form" class="form flex-container hidden">
                             <fieldset>
                                 <label>Email</label>
-                                <div class="input-field">
-                                    <input type="email" name="email" placeholder="Enter Email" id="email">  
+                                <div class="input-field ">
+                                    <input type="email" name="email" placeholder="Enter Email" id="login-email"   required>  
                                 </div>
                             </fieldset>
                             <fieldset>
                                 <label>Password</label>
-                                <div class="input-field">
-                                    <input type="password" name="password" placeholder="Enter Password" id="password">
+                                <div class="input-field ">
+                                    <input type="password" name="password" placeholder="Enter Password" id="login-password" required>
                                 </div>
                             </fieldset>
                             <div  class="find-password"><a href="#">Forgot password?</a></div>
@@ -55,25 +52,26 @@
                         <form action="" method="GET" id="signup-form" class="form flex-container">
                             <fieldset>
                                 <label>Email</label>
-                                <div class="input-field">
-                                    <input type="email" name="email" placeholder="Enter Email" id="email">  
+                                <div   class="input-field ">
+                                    <input type="email" name="email" placeholder="Enter Email" id="signup-email" required>
                                 </div>
                             </fieldset>
                             <fieldset>
                                 <label>Password</label>
-                                <div class="input-field">
-                                    <input type="password" name="password" placeholder="Enter Password" id="password">
+                                <div class="input-field ">
+                                    <span class="pswd-tips">Min.<i> 1 letter</i><i> 1 number</i></span>
+                                    <input type="password" name="password" placeholder="Minimum 10 digits" id="signup-password" required>
                                 </div>
                             </fieldset>
                             <fieldset>
                                 <label>Repeat Password</label>
-                                <div class="input-field">
-                                    <input type="password" name="password" placeholder="Repeat Password" id="password">
+                                <div class="input-field ">
+                                    <input type="password" name="password" placeholder="Repeat Password" id="repeat-password" required>
                                 </div>
                             </fieldset>
                             <fieldset>
                                 <label class="checkbox">
-                                    <input type="checkbox" id="agreement" name="agreement" value="terms" checked="checked">
+                                    <input type="checkbox" id="agreement" name="agreement" value="terms" checked="checked" required>
                                     <span></span>
                                     I agree to the <a href="#"> &nbsp; terms and conditions</a>
                                 </label>
@@ -83,13 +81,9 @@
                                     Remember my password
                                 </label>
                             </fieldset>
-                            <button type="submit" form="login-form" value="submit" class="btn signup-btn">Sign up</button>
+                            <button type="submit" form="signup-form" value="submit" class="btn signup-btn">Sign up</button>
                         </form>
                     </div>
-
-
-                    
-
                 </section>
 
                 <section class="flex-container ui-smedia">
@@ -98,11 +92,9 @@
                             <h1>Or continue with</h1>
                         </div>
                         <div class="flex-container media-btn-group">
-
-                                <button type="button" class="media-btn"><a href="#"><i class="fab fa-facebook-f media-btn-facebook"></i></a></button>
-                                <button type="button" class="media-btn"><a href="#"><img src="./images/glyphs/google.svg" class="media-btn-google"/></a></button>
-                                <button type="button" class="media-btn"><a href="#"><i class="fab fa-twitter media-btn-twitter"></i></a></button>
-
+                            <button type="button" class="media-btn"><a href="#"><i class="fab fa-facebook-f media-btn-facebook"></i></a></button>
+                            <button type="button" class="media-btn"><a href="#"><img src="./images/glyphs/google.svg" class="media-btn-google"/></a></button>
+                            <button type="button" class="media-btn"><a href="#"><i class="fab fa-twitter media-btn-twitter"></i></a></button>
                         </div>
                     </div>
                 </section>
@@ -112,7 +104,7 @@
 
         <!--main picture-->
         <section class="flex-container flex-photo">
-            <div class="photo-container">
+            <div class="photo-container" aria-label="A sunny photo">
             </div>
         </section>
 
